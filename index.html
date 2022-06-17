@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/scss/_icons.scss">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<body>
+    
+    <div class="refrence_grid">
+        <div id="side_display">
+            
+        </div>
+        <div id="first_ui">
+            <div class="time"><h1 id="clock"></h1></div>
+            
+            <div id="first_display">
+        
+        
+                <div class="login_now" id="login_card">
+                    <h2 style="padding-top:  0.5vh;">Login</h2>
+                    <p class="username_space">
+                        <input type="text" placeholder="INPUT USERNAME" class="signup_inputs" id="username_input">
+                        <small id="wrong_details"></small>
+                        <input type="password" placeholder="INPUT PASSCODE" class="signup_inputs" id="password_input"> <br>
+                        <div style="width: 90%; margin-left: 0.5vw;">
+                            <small > <input type="checkbox"> I hereby agree to the terms and conditions of the CBT exam, i promise not to multi-tab or cheat</small>
+                        </div>
+                        <p style="text-align: center;"><a href="#" onclick="check()"><button class="login">Login To Account</button></a></p>
+                        <p style="text-align: center; margin-right: 1vw;">OR</p>
+                        <p style="text-align: center; padding: 1vh 0;"><a href="#" onclick="create_new_account()"><small>create new account</small></a></p>
+                        <div style="text-align: center; margin-right: 1vw;">&copy; David Micah-Daniels</div>
+                    </p>
+                </div>
+                <div class="login_now" id="create_account_now">
+                    <h2 style="padding-top:  0.5vh;">Create New Account</h2>
+                    <p class="username_space">
+                        <input type="text" placeholder="INPUT USERNAME" class="signup_inputs" id="username_input">
+                        <small id="wrong_details"></small>
+                        <input type="password" placeholder="SET PASSCODE" class="signup_inputs" id="account_password_input"> <br>
+                        <div style="width: 90%; margin-left: 0.5vw;">
+                            <small > <input type="checkbox"> I hereby agree to the terms and conditions of the CBT exam, i promise not to multi-tab or cheat</small>
+                        </div>
+                        <p style="text-align: center;"><a href="#" onclick="check_new_account()"><button class="login">Create New Account</button></a></p>
+                        <p style="text-align: center; margin-right: 1vw;">OR</p>
+                        <p style="text-align: center; padding: 1vh 0;"><a href="#" onclick="login_to_exixting_account()"><small>login to exiting account</small></a></p>
+                        <div style="text-align: center; margin-right: 1vw;">&copy; David Micah-Daniels</div>
+                    </p>
+                </div>
+                <div class="pointer"></div>
+        
+        
+                <div class="start_exam">
+                    <a href="#" onclick="direct_start()"><button class="start_now">Start Exam</button></a>
+                    <a href="#" onclick="dashboard()"><button class="start_now">Dashboard</button></a>
+                </div>
+                <div class="example" id="main_example">
+                    <h1>Example: <br> Question 1</h1>
+                    <p>What file name does the browser deploy first or make visible to the user when hosting a website?</p> <br>
+                    <div class="options">
+                        <h2><input type="radio" name="one_option">Home.exe </h2>
+                        <h2><input type="radio" name="one_option">style.php</h2>
+                        <h2><input type="radio" name="one_option">about.js <br></h2>
+                        <h2><input type="radio" name="one_option">index.html <br></h2>
+                        <div class="question_buttons">
+                            <button class="question_btn">Previous</button>
+                            <button class="question_btn">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+                <div class="example" id="Question1">
+                    <!-- <div class="all_numbers">
+                        <button class="question_num" onclick="display_q1()">1</button>
+                        <button class="question_num" onclick="display_q2()">2</button>
+                        <button class="question_num"  onclick="display_q3()">3</button>
+                        <button class="question_num"  onclick="display_q4()">4</button>
+                        <button class="question_num"  onclick="display_q5()">5</button>
+                        <button class="question_num"  onclick="display_q6()">6</button>
+                        <button class="question_num"  onclick="display_q7()">7</button>
+                        <button class="question_num"  onclick="display_q8()">8</button>
+                        <button class="question_num"  onclick="display_q9()">9</button>
+                        <button class="question_num"  onclick="display_q10()">10</button>
+                    </div> -->
+                    <div class="time"><h1>Time:</h1><h1 id="clock"></h1></div>
+                    <h1>Question 1</h1>
+                    <p>What file name does the browser deploy first or make visible to the user when hosting a website?</p> <br>
+                    <div class="options">
+                        <div><input type="radio" name="one_option" id="ans1" onclick="click_check1()">Home.exe <br></div>
+                        <input type="radio" name="one_option">style.php <br>
+                        <input type="radio" name="one_option">about.js <br>
+                        <input type="radio" name="one_option">index.html <br>
+                        <div class="question_buttons">
+                            <a href="#" onclick="next1()"><button class="question_btn">Next</button></a>
+                        </div>
+                    </div>
+                 </div>
+                 <div class="example" id="Question2">
+                    <!-- <div class="all_numbers">
+                        <button class="question_num" onclick="display_q1()">1</button>
+                        <button class="question_num" onclick="display_q2()">2</button>
+                        <button class="question_num"  onclick="display_q3()">3</button>
+                        <button class="question_num"  onclick="display_q4()">4</button>
+                        <button class="question_num"  onclick="display_q5()">5</button>
+                        <button class="question_num"  onclick="display_q6()">6</button>
+                        <button class="question_num"  onclick="display_q7()">7</button>
+                        <button class="question_num"  onclick="display_q8()">8</button>
+                        <button class="question_num"  onclick="display_q9()">9</button>
+                        <button class="question_num"  onclick="display_q10()">10</button>
+                    </div> -->
+                    <div class="time"><h1>Time:</h1><h1 id="clock"></h1></div>
+                    <h1>Question 2</h1>
+                    <p>What is the Lorem ipsum dolor sit amet consectetur. question2 ?</p> <br>
+                    <div class="options">
+                        <div><input type="radio" name="one_option" id="ans2" onclick="click_check1()">Home.exe <br></div>
+                        <input type="radio" name="one_option">style.php <br>
+                        <input type="radio" name="one_option">about.js <br>
+                        <input type="radio" name="one_option">index.html <br>
+                        <div class="question_buttons">
+                            <a href="#" onclick="previous1()"><button class="question_btn">Previous</button></a>
+                            <a href="#" onclick="next2()"><button class="question_btn">Next</button></a>
+                        </div>
+                    </div>
+                 </div>
+                 <div class="example" id="Question3">
+                    <!-- <div class="all_numbers">
+                        <button class="question_num" onclick="display_q1()">1</button>
+                        <button class="question_num" onclick="display_q2()">2</button>
+                        <button class="question_num"  onclick="display_q3()">3</button>
+                        <button class="question_num"  onclick="display_q4()">4</button>
+                        <button class="question_num"  onclick="display_q5()">5</button>
+                        <button class="question_num"  onclick="display_q6()">6</button>
+                        <button class="question_num"  onclick="display_q7()">7</button>
+                        <button class="question_num"  onclick="display_q8()">8</button>
+                        <button class="question_num"  onclick="display_q9()">9</button>
+                        <button class="question_num"  onclick="display_q10()">10</button>
+                    </div> -->
+                    <div class="time"><h1>Time:</h1><h1 id="clock"></h1></div>
+                    <h1>Question 3</h1>
+                    <p>this is the Lorem ipsum dolor sit. question3 ?</p> <br>
+                    <div class="options">
+                        <div><input type="radio" name="one_option" id="ans3" onclick="click_event3()">Home.exe <br></div>
+                        <input type="radio" name="one_option">style.php <br>
+                        <input type="radio" name="one_option">about.js <br>
+                        <input type="radio" name="one_option">index.html <br>
+                        <div class="question_buttons">
+                            <a href="#" onclick="previous2()"><button class="question_btn">Previous</button></a>
+                            <a href="#" onclick="next3()"><button class="question_btn">Next</button></a>
+                        </div>
+                    </div>
+                 </div>
+                 <div class="example" id="Question4">
+                    <!-- <div class="all_numbers">
+                        <button class="question_num" onclick="display_q1()">1</button>
+                        <button class="question_num" onclick="display_q2()">2</button>
+                        <button class="question_num"  onclick="display_q3()">3</button>
+                        <button class="question_num"  onclick="display_q4()">4</button>
+                        <button class="question_num"  onclick="display_q5()">5</button>
+                        <button class="question_num"  onclick="display_q6()">6</button>
+                        <button class="question_num"  onclick="display_q7()">7</button>
+                        <button class="question_num"  onclick="display_q8()">8</button>
+                        <button class="question_num"  onclick="display_q9()">9</button>
+                        <button class="question_num"  onclick="display_q10()">10</button>
+                    </div> -->
+                    <div class="time"><h1>Time:</h1><h1 id="clock"></h1></div>
+                    <h1>Question 4</h1>
+                    <p>this is the Lorem ipsum dolor sit. question4 ?</p> <br>
+                    <div class="options">
+                        <div><input type="radio" name="one_option" id="ans4" onclick="click_event4()">Home.exe <br></div>
+                        <input type="radio" name="one_option">style.php <br>
+                        <input type="radio" name="one_option">about.js <br>
+                        <input type="radio" name="one_option">index.html <br>
+                        <div class="question_buttons">
+                            <a href="#" onclick="previous3()"><button class="question_btn">Previous</button></a>
+                            <a href="#" onclick="next4()"><button class="question_btn">Next</button></a>
+                        </div>
+                    </div>
+                 </div>
+        
+                 <div class="example" id="Question5">
+                    <!-- <div class="all_numbers">
+                        <button class="question_num" onclick="display_q1()">1</button>
+                        <button class="question_num" onclick="display_q2()">2</button>
+                        <button class="question_num"  onclick="display_q3()">3</button>
+                        <button class="question_num"  onclick="display_q4()">4</button>
+                        <button class="question_num"  onclick="display_q5()">5</button>
+                        <button class="question_num"  onclick="display_q6()">6</button>
+                        <button class="question_num"  onclick="display_q7()">7</button>
+                        <button class="question_num"  onclick="display_q8()">8</button>
+                        <button class="question_num"  onclick="display_q9()">9</button>
+                        <button class="question_num"  onclick="display_q10()">10</button>
+                    </div> -->
+                    <h1>Question 5</h1>
+                    <p>this is the Lorem ipsum dolor sit. question5 ?</p> <br>
+                    <div class="options">
+                        <div><input type="radio" name="one_option" id="ans5" onclick="click_event5()">Home.exe <br></div>
+                        <input type="radio" name="one_option">style.php <br>
+                        <input type="radio" name="one_option">about.js <br>
+                        <input type="radio" name="one_option">index.html <br>
+                        <div class="question_buttons">
+                            <a href="#" onclick="previous4()"><button class="question_btn">Previous</button></a>
+                            <a href="#" onclick="next5()"><button class="question_btn">Next</button></a>
+                        </div>
+                    </div>
+                 </div>
+        
+                 <div class="example" id="Question6">
+                    <!-- <div class="all_numbers">
+                        <button class="question_num" onclick="display_q1()">1</button>
+                        <button class="question_num" onclick="display_q2()">2</button>
+                        <button class="question_num"  onclick="display_q3()">3</button>
+                        <button class="question_num"  onclick="display_q4()">4</button>
+                        <button class="question_num"  onclick="display_q5()">5</button>
+                        <button class="question_num"  onclick="display_q6()">6</button>
+                        <button class="question_num"  onclick="display_q7()">7</button>
+                        <button class="question_num"  onclick="display_q8()">8</button>
+                        <button class="question_num"  onclick="display_q9()">9</button>
+                        <button class="question_num"  onclick="display_q10()">10</button>
+                    </div> -->
+                    <h1>Question 6</h1>
+                    <p>this is the Lorem ipsum dolor sit. question6?</p> <br>
+                    <div class="options">
+                        <div><input type="radio" name="one_option" onclick="correct6()">Home.exe <br></div>
+                        <input type="radio" name="one_option">style.php <br>
+                        <input type="radio" name="one_option">about.js <br>
+                        <input type="radio" name="one_option">index.html <br>
+                        <div class="question_buttons">
+                            <a href="#" onclick="previous5()"><button class="question_btn">Previous</button></a>
+                            <a href="#" onclick="next6()"><button class="question_btn">Next</button></a>
+                        </div>
+                    </div>
+                 </div>
+                 <div class="example" id="Question7">
+                    <!-- <div class="all_numbers">
+                        <button class="question_num" onclick="display_q1()">1</button>
+                        <button class="question_num" onclick="display_q2()">2</button>
+                        <button class="question_num"  onclick="display_q3()">3</button>
+                        <button class="question_num"  onclick="display_q4()">4</button>
+                        <button class="question_num"  onclick="display_q5()">5</button>
+                        <button class="question_num"  onclick="display_q6()">6</button>
+                        <button class="question_num"  onclick="display_q7()">7</button>
+                        <button class="question_num"  onclick="display_q8()">8</button>
+                        <button class="question_num"  onclick="display_q9()">9</button>
+                        <button class="question_num"  onclick="display_q10()">10</button>
+                    </div> -->
+                    <h1>Question 7</h1>
+                    <p>this is the Lorem ipsum dolor sit. question7?</p> <br>
+                    <div class="options">
+                        <div><input type="radio" name="one_option" onclick="correct7()">Home.exe <br></div>
+                        <input type="radio" name="one_option">style.php <br>
+                        <input type="radio" name="one_option">about.js <br>
+                        <input type="radio" name="one_option">index.html <br>
+                        <div class="question_buttons">
+                            <a href="#" onclick="previous6()"><button class="question_btn">Previous</button></a>
+                            <a href="#" onclick="next7()"><button class="question_btn">Next</button></a>
+                        </div>
+                    </div>
+                 </div>
+        
+                 <div class="example" id="Question8">
+                    <!-- <div class="all_numbers">
+                        <button class="question_num" onclick="display_q1()">1</button>
+                        <button class="question_num" onclick="display_q2()">2</button>
+                        <button class="question_num"  onclick="display_q3()">3</button>
+                        <button class="question_num"  onclick="display_q4()">4</button>
+                        <button class="question_num"  onclick="display_q5()">5</button>
+                        <button class="question_num"  onclick="display_q6()">6</button>
+                        <button class="question_num"  onclick="display_q7()">7</button>
+                        <button class="question_num"  onclick="display_q8()">8</button>
+                        <button class="question_num"  onclick="display_q9()">9</button>
+                        <button class="question_num"  onclick="display_q10()">10</button>
+                    </div> -->
+                    <h1>Question 8</h1>
+                    <p>this is the Lorem ipsum dolor sit. question8?</p> <br>
+                    <div class="options">
+                        <div><input type="radio" name="one_option" onclick="correct8()">Home.exe <br></div>
+                        <input type="radio" name="one_option">style.php <br>
+                        <input type="radio" name="one_option">about.js <br>
+                        <input type="radio" name="one_option">index.html <br>
+                        <div class="question_buttons">
+                            <a href="#" onclick="previous7()"><button class="question_btn">Previous</button></a>
+                            <a href="#" onclick="next8()"><button class="question_btn">Next</button></a>
+                        </div>
+                    </div>
+                 </div>
+        
+                 <div class="example" id="Question9">
+                    <!-- <div class="all_numbers">
+                        <button class="question_num" onclick="display_q1()">1</button>
+                        <button class="question_num" onclick="display_q2()">2</button>
+                        <button class="question_num"  onclick="display_q3()">3</button>
+                        <button class="question_num"  onclick="display_q4()">4</button>
+                        <button class="question_num"  onclick="display_q5()">5</button>
+                        <button class="question_num"  onclick="display_q6()">6</button>
+                        <button class="question_num"  onclick="display_q7()">7</button>
+                        <button class="question_num"  onclick="display_q8()">8</button>
+                        <button class="question_num"  onclick="display_q9()">9</button>
+                        <button class="question_num"  onclick="display_q10()">10</button>
+                    </div> -->
+                    <h1>Question 9</h1>
+                    <p>this is the Lorem ipsum dolor sit. question9?</p> <br>
+                    <div class="options">
+                        <div><input type="radio" name="one_option" onclick="correct9()">Home.exe <br></div>
+                        <input type="radio" name="one_option">style.php <br>
+                        <input type="radio" name="one_option">about.js <br>
+                        <input type="radio" name="one_option">index.html <br>
+                        <div class="question_buttons">
+                            <a href="#" onclick="previous8()"><button class="question_btn">Previous</button></a>
+                            <a href="#" onclick="next9()"><button class="question_btn">Next</button></a>
+                        </div>
+                    </div>
+                 </div>
+                 <div class="example" id="Question10">
+                    <!-- <div class="all_numbers">
+                        <button class="question_num" onclick="display_q1()">1</button>
+                        <button class="question_num" onclick="display_q2()">2</button>
+                        <button class="question_num"  onclick="display_q3()">3</button>
+                        <button class="question_num"  onclick="display_q4()">4</button>
+                        <button class="question_num"  onclick="display_q5()">5</button>
+                        <button class="question_num"  onclick="display_q6()">6</button>
+                        <button class="question_num"  onclick="display_q7()">7</button>
+                        <button class="question_num"  onclick="display_q8()">8</button>
+                        <button class="question_num"  onclick="display_q9()">9</button>
+                        <button class="question_num"  onclick="display_q10()">10</button>
+                    </div> -->
+                    <h1>Question 10</h1>
+                    <p>this is the Lorem ipsum dolor sit. question10?</p> <br>
+                    <div class="options">
+                        <div><input type="radio" name="one_option" onclick="correct10()">Home.exe <br></div>
+                        <input type="radio" name="one_option">style.php <br>
+                        <input type="radio" name="one_option">about.js <br>
+                        <input type="radio" name="one_option">index.html <br>
+                        <div class="question_buttons">
+                            <a href="#" onclick="previous9()"><button class="question_btn">Previous</button></a>
+                            <a href="#" onclick="checking()"><button class="question_btn">SUBMIT</button></a>
+                        </div>
+                    </div>
+                 </div>
+        
+        </div>
+    </div>
+
+    <div class="student_dashboard" id="main_dashboard">
+        <div class="navbar">
+            <h1 style="width: 25vw; margin-left: 3vw;">
+                <a href="#" onclick="sidebar_collapse()" id="collapse_navbar"><i class="fa fa-handshake"></i></a>
+                <a href="#" onclick="sidebar_show()" id="show_navbar"><i class="fa fa-handshake"></i></a>
+                  David's CBT
+            </h1>
+
+            <ul class="nav_ul">
+                <li>Notification</li>
+                <li>profle</li>
+            </ul>
+        </div>
+        <div class="sidebar" id="sidebar_collapse">
+            <i class="fa fa-shopping-cart"><br> Task</i>
+            <i class="fa fa-shopping-cart"><br> Posts</i>
+            <i class="fa fa-shopping-cart"><br> Grade</i>
+            <i class="fa fa-shopping-cart"><br> tutors</i>
+        </div>
+        <div class="dashboard_content" id="dashboard">
+            <div class="exam_grid">
+                <div class="exam_div">
+                    <i class="fa fa-book exams"></i>
+                    <h1>HTML 5</h1>
+                    <p><button class="write_exam">START EXAM</button></p>
+                </div>
+                <div class="exam_div">
+                    <i class="fa fa-book exams"></i>
+                    <h1>CSS 5</h1>
+                    <p><button class="write_exam">START EXAM</button></p>
+                </div>
+                <div class="exam_div">
+                    <i class="fa fa-book exams"></i>
+                    <h1>JAVASCRIPT ES6</h1>
+                    <p><button class="write_exam">START EXAM</button></p>
+                </div>
+                <div class="exam_div">
+                    <i class="fa fa-book exams"></i>
+                    <h1>BOOTSTRAP 5</h1>
+                    <p><button class="write_exam">START EXAM</button></p>
+                </div>
+                <div class="exam_div">
+                    <i class="fa fa-book exams"></i>
+                    <h1>REACT JS 5</h1>
+                    <p><button class="write_exam">START EXAM</button></p>
+                </div>
+                <div class="exam_div">
+                    <i class="fa fa-book exams"></i>
+                    <h1>VUE JS</h1>
+                    <p><button class="write_exam">START EXAM</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
